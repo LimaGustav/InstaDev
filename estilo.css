@@ -16,7 +16,7 @@ main{
 .principal_cadastro{
     background-color: #FFFFFF;
     width: 17%;
-    height: 45%;
+    height: 430px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +52,7 @@ form{
 
 input{
     width: 16vw;
-    height: 2.5vh;
+    height: 19px;
     background-color: #FAFAFA;
     color: #AFAFAF;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -67,7 +67,7 @@ button{
     color: #FFFFFF;
     border: none;
     border-radius: 4px;
-    height: 3.5vh;
+    height: 32.8167px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-weight: normal;
 }
@@ -183,7 +183,11 @@ button{
     }
 
     form{
-        height: 30vh;
+        height: 195.9px;
+    }
+
+    button{
+        height: 29.3833px;
     }
 
     input{
