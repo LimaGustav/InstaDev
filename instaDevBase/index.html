@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container_header grid">
+            <a href="" target="_parent"><img class="logo_header" src="assets/instadevLogo.png" alt=""></a>
+            <form class="pesquisa_form" action="post">
+                <input class="pesquisar" type="text" name="search" id="search" placeholder="Pesquisar" required>
+            </form>
+
+            <ul class="nav_header">
+                <li><a class="icons_header" href=""><img src="assets/casinha.svg" alt=""></a></li>
+                <li><a href=""><img src="assets/aviaozinho.svg" alt=""></a></li>
+                <li><a href=""><img src="assets/bussula.svg" alt=""></a></li>
+                <li><a href=""><img src="assets/coracao.svg" alt=""></a></li>
+                <li><a href=""><img src="assets/perfil_pequeno.png" alt=""></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- STORIES -->
+        <div class="container_main grid">
+            <div class="posicionador_status">
+                <section class="section_status">
+                    <div class="container_status">
+
+                        <div class="perfil_status p1">
+                            <a class="link_status" href=""><img src="assets/fotoStatus/vin-diesel.png" alt=""></a>
+                            <a href=""><span class="nomes">vin-disel</span></a>
+                        </div>
+                        <div class="perfil_status p2">
+                            <a class="link_status" href=""><img src="assets/fotoStatus/gabigordo.png" alt=""></a>
+                            <a href=""><span class="nomes">gabigordo</span></a>
+                        </div>
+                        <div class="perfil_status p3">
+                            <a class="link_status" href=""><img src="assets/fotoStatus/will-baiano.png" alt=""></a>
+                            <a href=""><span class="nomes">will-baiano</span></a>
+                        </div>
+                        <div class="perfil_status p4">
+                            <a class="link_status" href=""><img src="assets/fotoStatus/tony_stark.png" alt=""></a>
+                            <a href=""><span class="nomes">adriano-stark</span></a>
+                        </div>
+                        <div class="perfil_status p5">
+                            <a class="link_status" href=""><img src="assets/fotoStatus/pele.png" alt=""></a>
+                            <a href=""><span class="nomes">king_pele</span></a>
+                        </div>
+                        <div class="perfil_status p6">
+                            <a class="link_status" href=""><img src="assets/fotoStatus/samuel-rosa-bebê.png" alt=""></a>
+                            <a href=""><span class="nomes">samuel_rosa</span></a>
+                        </div>
+                        <div class="perfil_status p7">
+                            <a class="link_status" href=""><img src="assets/fotoStatus/chaves_metal.png" alt=""></a>
+                            <a href=""><span class="nomes">chaves_metal</span></a>
+                        </div>
+                    </div>
+                </section>
+                <!-- PERFIL ASIDE -->
+                <aside class="perfil">
+                    <a class="foto_perfil" href=""><img src="assets/fotoStatus/thank-you.png" alt=""></a>
+                    <div class="texto_perfil">
+                        <span class="user">yes_baby</span>
+                        <span class="nome">Marcos Jeeves</span>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- POSTAR -->
+            <div class="posicionador_postar grid">
+                <section class="postar">
+                    <div class="centralizador_postar">
+                        <div class="container_postar">
+                            <img src="assets/fotoStatus/thank-you.png" alt="" class="postar_img">
+                            <span>Postar</span>
+                        </div>
+                        <form class="form_post" action="post">
+                            <input class="imgdesc_input" type="text" placeholder="Digite a descrição da imagem">
+
+                            <label class="img_input" for="file">Escolha a imagem</label>
+                            <input class="none" type="file" name="file" id="file">
+                            <button class="btn_postar" type="submit">Postar</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <!-- POST -->
+            <div class="posicionador_post grid">
+                <section class="post">
+                    <div class="posicionador_post_perfil">
+                        <div class="centralizador_perfil_post">
+                            <div class="perfil_post">
+                                <img class="foto_perfil_post" src="assets/fotoStatus/gabigordo.png" alt="">
+                                <div class="nome_perfil_post">
+                                    <span class="nome_post">gabigordo</span>
+                                    <span class="onde_post">Flamengo, RJ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img class="post_img" src="assets/post-gabigordo.png" alt="">
+
+                    <div class="posicionador_acoes_post">
+                        <div class="centralizador_coments">
+                            <div class="acoes_post">
+                                <a href=""><img src="assets/coracao.svg" alt=""></a>
+                                <a href=""><img src="assets/coment.svg" alt=""></a>
+                                <input class="comentario_input" type="text" placeholder="Comentar">
+                            </div>
+                            <span class="curtidas">2077 curtidas</span>
+                            <div class="comentarios">
+                                <span class="nome_post block">gabigordo</span>
+                                <span class="onde_post block comment">#flamengo Amo vocês mil milhões</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
