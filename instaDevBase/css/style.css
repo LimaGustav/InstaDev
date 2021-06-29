@@ -119,6 +119,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    border: 2px #F1F1F1 solid;
 }
 
 .container_status {
@@ -210,6 +212,8 @@ main {
     align-items: center;
 
     background-color: white;
+
+    border: 2px #F1F1F1 solid;
 }
 
 .centralizador_postar {
@@ -300,6 +304,8 @@ main {
     width: 100%;
     max-width: 610px;
     background-color: white;
+
+    border: 1px #F1F1F1 solid;
 }
 
 .posicionador_post_perfil {
