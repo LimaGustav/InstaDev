@@ -243,3 +243,153 @@ h2{
     font-size: 13px;
     color: #909090;
 }
+
+@media (max-width: 420px){
+
+    .container{
+        width: 340px;
+    }
+
+    .cabecalho_perfil{
+        margin-left: 0px;
+    }
+
+    .foto_perfil{
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+    }
+
+    .info_escrita_perfil{
+        height: 100px;
+        margin-top: 0px;
+        width: 220px;
+    }
+
+    h1{
+        font-size: 23px;
+    }
+
+    .informacoes_perfil{
+        width: 220px;
+    }
+
+    h2{
+        font-size: 12.9px;
+    }
+
+    .primeiro_h2{
+        width: 70px;
+    }
+
+    .segundo_h2{
+        width: 54px;
+    }
+
+    .terceiro_h2{
+        width: 65px;
+    }
+
+    .links_perfil{
+        width: 220px;
+        align-items: center;
+    }
+
+    .links_perfil a{
+        font-size: 14px;
+    }
+
+    .publicacoes{
+        width: 340px;
+    }
+
+    .post{
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post img{
+        width: 340px;
+        height: 310px;
+    }
+
+    .texto_publicacao{
+        width: 280px;
+    }
+
+    .fotinha_usuario img{
+        width: 65px;
+        height: 65px;
+    }
+
+    .interacoes{
+        margin-top: 20px;
+        width: 210px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .interacoes h4{
+        margin-top: 0px;
+    }
+
+    .comentario{
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .comentario span{
+        font-size: 16px;
+    }
+
+    .comentario p{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .coracao_menor{
+        width: 20px;
+        height: 20px;
+    }
+
+    .coracao_menor img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .resposta_comentario{
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .resposta_comentario span{
+        font-size: 16px;
+    }
+
+    .resposta_comentario p{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .coracao_menor_resposta_comentario{
+        width: 17px;
+        height: 17px;
+    }
+
+    .coracao_menor_resposta_comentario img{
+        width: 17px;
+        height: 17px;
+    }
+
+    .classe_ver_comentarios{
+        display: flex;
+        width: 280px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+}
