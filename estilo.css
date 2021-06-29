@@ -13,6 +13,90 @@ main{
     justify-content: center;
 }
 
+/* FIM HEADER */
+
+html {
+    background-color: #E5E5E5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+    height: min-content;
+}
+
+li {
+    height: min-content;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid {
+    width: 80vw;
+    max-width: 940px;
+
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.header {
+    height: 53px;
+    background-color: white;
+}
+
+.container_header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_header {
+    width: 78px;
+    height: 27px;
+}
+
+.pesquisar {
+    background: #FAFAFA;
+
+    border: 1px solid black;
+
+    height: 28px;
+    width: 215px;
+
+    text-align: center;;
+}
+
+.nav_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 27%;
+
+    flex-grow: unset;
+}
+
+.icons_header {
+    height: min-content;
+}
+
+/* FIM HEADER */
+
+
 .container{
     width: 940px;
 }
@@ -243,6 +327,75 @@ h2{
     font-size: 13px;
     color: #909090;
 }
+
+@media (max-width: 1030px) {
+
+    .perfil {
+        display: none;
+    }
+    
+    .posicionador_status {
+        justify-content: center;
+    }
+
+    .posicionador_postar {
+        justify-content: center;
+    }
+
+    .posicionador_post {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 753px) {
+    .pesquisa_form {
+        display: none;
+    }
+
+    .nav_header {
+        width: 50%;
+    }
+
+    .p7 {
+        display: none;
+    }
+}
+
+@media (max-width: 590px) {
+    .form_post {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 575px) {
+    .p6 {
+        display: none;
+    }
+
+}
+
+@media (max-width: 465px) {
+    .nav_header {
+        width: 65%;
+    }
+
+    .p5 {
+        display: none;
+    }
+}
+
+@media (max-width: 390px) {
+    .comentario_input {
+        width: 70%;
+    }
+
+    .p4 {
+        display: none;
+    }
+}
+
 
 @media (max-width: 420px){
 
