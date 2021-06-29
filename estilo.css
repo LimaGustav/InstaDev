@@ -143,6 +143,8 @@ button{
 
     .textos_termo{
         width: 23.1vw;
+        font-size: 13px;
+        font-weight: 300;
     }
 
     .div_conectar_conta{
@@ -153,4 +155,57 @@ button{
         margin-top: 15px;
         margin-bottom: 15px;
     }
+}
+
+@media (max-width: 420px){
+
+    body{
+        height: 657px;
+    };
+
+    main{
+        height: 657px;
+    }
+
+    .principal_cadastro{
+        margin-top: 30px;
+        margin-bottom: 10px;
+        width: 70%;
+        height: 65%;
+    }
+
+    .logo_instadev{
+        margin-top: 10px;
+    }
+
+    .texto_cadastro{
+        font-size: 15px;
+    }
+
+    form{
+        height: 30vh;
+    }
+
+    input{
+        width: 60vw;
+    }
+
+    .textos_termo{
+        width: 63vw;
+        margin-bottom: 10px;
+    }
+
+    .div_conectar_conta{
+        width: 80%;
+    }
+
+    .obtenha_aplicativo{
+        font-size: 15px;
+    }
+
+    .lojas_aplicativo img{
+        width: 31.5vw;
+        margin-bottom: 30px;
+    }
+
 }
