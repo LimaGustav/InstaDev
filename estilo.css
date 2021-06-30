@@ -116,6 +116,18 @@ button{
     width: 8.5vw;
 }
 
+
+@media (max-width: 1600px){
+
+    form{
+        height: 230px;
+    }
+
+    .textos_termo{
+        font-size: 13.1px;
+    }
+}
+
 @media (max-width: 1420px){
 
     main{
@@ -156,6 +168,7 @@ button{
         margin-bottom: 15px;
     }
 }
+
 
 @media (max-width: 420px){
 
