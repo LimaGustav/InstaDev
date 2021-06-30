@@ -46,6 +46,8 @@ namespace InstaDev.Models
 
         }
         
-        
+       public int RetornaId() {
+           return IdUsuario;
+       }
     }
 }

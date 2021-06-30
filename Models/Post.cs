@@ -3,7 +3,7 @@ using InstaDev.Controllers.Interfaces;
 
 namespace InstaDev.Models
 {
-    public class Post
+    public class Post : ClasseBase, IPost
     {
         private string Titulo { get; set; }
         
@@ -15,9 +15,19 @@ namespace InstaDev.Models
 
         private int IdPost { get; set; }
 
+        private const string CAMINHO = "Database/post.csv";
+        
+        public Post() {
+            CriarPasta(CAMINHO);
+        }
+
+        public string PrepararPost(Post p) {
+            return $"{p.Titulo};{p.Imagem};{p.PostadoPor.RetornaId().ToString()};{p.HoraPostagem.ToString()};{p.IdPost.ToString()}";
+        }
+
         public void Criar(Post p)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Deletar(int id)
