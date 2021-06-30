@@ -22,7 +22,7 @@ namespace InstaDev.Models
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
