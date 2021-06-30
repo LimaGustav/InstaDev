@@ -9,21 +9,33 @@ namespace InstaDev.Models
         private string NomeUsuario { get; set; }
     
         private string Foto { get; set; }
-    
-        private string Nome { get; set; }
 
         private int IdUsuario { get; set; }
 
-        
+        private const string CAMINHO = "Database/Usuario.csv";
+
+        public Usuario()
+        {
+            CriarPasta(CAMINHO);
+        }
+
+        public string PreparaLinha(Usuario u)
+        {
+            return $"{u.Nome};{u.Email};{u.NomeUsuario};{u.Foto};{u.IdUsuario}";
+        }
 
         public void Criar(Usuario u)
         {
-
+            string[] linha = {PreparaLinha(j)};
+            File.AppendAllLines(CAMINHO, linha);
         }
         
-        public void Excluir(Usuario u)
+        public void Excluir(int id)
         {
+            List<string> linhas = LerTodasAsLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
 
+            ReescreverCSV(CAMINHO, linhas);
         }
         
         public void AlterarNome(Usuario u)
