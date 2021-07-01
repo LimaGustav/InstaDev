@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -58,6 +59,28 @@ namespace InstaDev.Models
         
         public void AlterarImagem(Usuario u)
         {
+
+        }
+
+        public List<Usuario> Listar() {
+            List<Usuario> usuarios = new List<Usuario>();
+
+            string[] linhas = File.ReadAllLines(CAMINHO);
+            foreach (var item in linhas)
+            {
+                string[] linha = item.Split(";");
+
+                Usuario user = new Usuario();
+                user.Nome = linha[0];
+                user.Email = linha[1];
+                user.NomeUsuario = linha[2];
+                user.Foto = linha[3];
+                user.IdUsuario = Int32.Parse(linha[4]);
+
+                usuarios.Add(user);
+            }
+
+            return usuarios;
 
         }
         

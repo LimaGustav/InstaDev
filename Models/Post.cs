@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using InstaDev.Controllers.Interfaces;
+using InstaDev.Interfaces;
 
 namespace InstaDev.Models
 {
@@ -33,12 +33,34 @@ namespace InstaDev.Models
             File.AppendAllLines(CAMINHO,linha);
         }
 
-        public void Deletar(int id)
+        public void Excluir(int id)
         {
             List<string> linhas = LerTodasLinhasCSV(CAMINHO);
             linhas.RemoveAll(x => x.Split(";")[4] == IdPost.ToString());
             
             ReescreverCSV(CAMINHO,linhas);
+        }
+
+        public List<Post> Listar()
+        {
+            List<Post> posts = new List<Post>();
+            Usuario user = new Usuario();
+
+            string[] linhas = File.ReadAllLines(CAMINHO);
+            foreach (var item in linhas)
+            {
+                string[] linha = item.Split(";");
+
+                Post post = new Post();
+                post.Titulo = linha[0];
+                post.Imagem = linha[1];
+                post.PostadoPor = user.Listar().Find(x => x.RetornaId().ToString() == linha[2]);
+                post.HoraPostagem = Convert.ToDateTime(linha[3]);
+                post.IdPost = Int32.Parse(linha[4]);
+
+                posts.Add(post);
+            }
+            return posts;
         }
     }
 }
