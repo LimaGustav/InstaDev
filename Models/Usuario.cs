@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using System.IO;
 
 namespace InstaDev.Models
 {
-    public class Usuario
+    public class Usuario : ClasseBase
     {
         private string Nome { get; set; }
     
@@ -14,16 +15,30 @@ namespace InstaDev.Models
 
         private int IdUsuario { get; set; }
 
-        
+        private const string CAMINHO = "Database/Usuario.csv";
+
+        public Usuario()
+        {
+            CriarPasta(CAMINHO);
+        }
+
+        public string PreparaLinha(Usuario u)
+        {
+            return $"{u.Nome};{u.Email};{u.NomeUsuario};{u.Foto};{u.IdUsuario}";
+        }
 
         public void Criar(Usuario u)
         {
-
+            string[] linha = {PreparaLinha(j)};
+            File.AppendAllLines(CAMINHO, linha);
         }
         
-        public void Excluir(Usuario u)
+        public void Excluir(int id)
         {
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
 
+            ReescreverCSV(CAMINHO, linhas);
         }
         
         public void AlterarNome(Usuario u)
