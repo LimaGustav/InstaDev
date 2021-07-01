@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 using InstaDev.Controllers.Interfaces;
 
 namespace InstaDev.Models
@@ -27,12 +29,16 @@ namespace InstaDev.Models
 
         public void Criar(Post p)
         {
-            
+            string[] linha = {PrepararPost(p)};
+            File.AppendAllLines(CAMINHO,linha);
         }
 
         public void Deletar(int id)
         {
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[4] == IdPost.ToString());
             
+            ReescreverCSV(CAMINHO,linhas);
         }
     }
 }

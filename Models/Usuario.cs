@@ -29,7 +29,7 @@ namespace InstaDev.Models
 
         public void Criar(Usuario u)
         {
-            string[] linha = {PreparaLinha(j)};
+            string[] linha = {PreparaLinha(u)};
             File.AppendAllLines(CAMINHO, linha);
         }
         
