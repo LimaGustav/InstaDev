@@ -1,5 +1,6 @@
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace InstaDev.Models
 {
@@ -42,6 +43,19 @@ namespace InstaDev.Models
                    output.Write(item + "\n"); 
                 }
             }
+        }
+
+        public int GerarId(List<int> ids){
+            int c = 1;
+            while (c <= (ids.Max()+1))
+            {
+                if (!ids.Contains(c))
+                {
+                    return c;
+                }
+                c++;
+            }
+            return c;
         }
     }
 }
