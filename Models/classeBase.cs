@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace InstaDev.Models
 {
-    public class ClasseBase
+    public class classeBase
     {
         public void CriarPasta(string _caminho){
             string pasta = _caminho.Split("/")[0];

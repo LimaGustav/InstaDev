@@ -1,6 +1,9 @@
+using System.Collections.Generic;
+using System.IO;
+
 namespace InstaDev.Models
 {
-    public class Usuario
+    public class Usuario : classeBase
     {
         private string Nome { get; set; }
     
@@ -26,43 +29,25 @@ namespace InstaDev.Models
 
         public void Criar(Usuario u)
         {
-            string[] linha = {PreparaLinha(j)};
+            string[] linha = {PreparaLinha(u)};
             File.AppendAllLines(CAMINHO, linha);
         }
         
         public void Excluir(int id)
         {
-            List<string> linhas = LerTodasAsLinhasCSV(CAMINHO);
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
 
             ReescreverCSV(CAMINHO, linhas);
         }
         
-        public void AlterarNome(Usuario u)
+        public void Alterar(Usuario u)
         {
-
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[4] == u.IdUsuario.ToString());
+            linhas.Add(PreparaLinha(u));
+            ReescreverCSV(CAMINHO,linhas);
         }
-        
-        public void AlterarNomeUsuario(Usuario u)
-        {
-
-        }
-        
-        public void AlterarSenha(Usuario u)
-        {
-
-        }
-        
-        public void AlterarImagem(Usuario u)
-        {
-
-        }
-
-        public List<Usuario> Listar()
-        {
-
-        }
-        
-        
+            
     }
 }
