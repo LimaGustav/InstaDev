@@ -1,18 +1,37 @@
+using System.Collections.Generic;
+using System.IO;
+
 namespace InstaDev.Models
 {
-    public class Usuario
+    public class Usuario : ClasseBase
     {
         private string Nome { get; set; }
-    
         private string Email { get; set; }
-    
         private string NomeUsuario { get; set; }
-    
         private string Foto { get; set; }
-
         private int IdUsuario { get; set; }
-
+        private string Senha  { get; set; }
         private const string CAMINHO = "Database/Usuario.csv";
+
+        public void AtribuirEmail(string _email)
+        {
+            Email = _email;
+        }
+
+        public void AtribuirNome(string _nome)
+        {
+            Nome = _nome;
+        }
+
+        public void AtribuirNomeUsuario(string _nomeUsuario)
+        {
+            NomeUsuario = _nomeUsuario;
+        }
+
+        public void AtribuirSenha(string _senha)
+        {
+            Senha = _senha;
+        }
 
         public Usuario()
         {
@@ -21,18 +40,18 @@ namespace InstaDev.Models
 
         public string PreparaLinha(Usuario u)
         {
-            return $"{u.Nome};{u.Email};{u.NomeUsuario};{u.Foto};{u.IdUsuario}";
+            return $"{u.Email};{u.Nome};{u.NomeUsuario};{u.Senha}";
         }
 
         public void Criar(Usuario u)
         {
-            string[] linha = {PreparaLinha(j)};
+            string[] linha = { PreparaLinha(u) };
             File.AppendAllLines(CAMINHO, linha);
         }
         
         public void Excluir(int id)
         {
-            List<string> linhas = LerTodasAsLinhasCSV(CAMINHO);
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
 
             ReescreverCSV(CAMINHO, linhas);
@@ -60,7 +79,9 @@ namespace InstaDev.Models
 
         public List<Usuario> Listar()
         {
+            List<Usuario> usuarios = new List<Usuario>();
 
+            return usuarios; 
         }
         
         

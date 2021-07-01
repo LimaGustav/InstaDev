@@ -10,7 +10,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 969px;
+    height: 938px;
 }
 
 .principal_cadastro{
@@ -48,6 +48,10 @@ form{
     flex-direction: column;
     justify-content: space-between;
     height: 25vh;
+}
+
+.mensagem{
+    color: red;
 }
 
 input{

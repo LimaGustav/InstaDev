@@ -1,0 +1,41 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+
+<section class="principal_cadastro">
+    <img src="~/assets/Instadev.png" class="logo_instadev">
+    <div class="textos_cadastros">
+        <p class="texto_cadastro">Cadastre-se para ver fotos e</p>
+        <p class="texto_cadastro">vídeos dos seus amigos</p>
+    </div>
+    <form method="POST" action='@Url.Action("Cadastrar")'>
+
+        <div class="mensagem">@TempData.Peek("Mensagem")</div>
+
+        <input type="email" placeholder="Email" name="Email" required>
+
+        <input type="text" placeholder="Nome Completo" name="Nome" required>
+
+        <input type="text" placeholder="Nome de usuário" name="NomeUsuario" required>
+
+        <input type="password" placeholder="Senha" name="Senha" required>
+
+        <button type="submit" class="botao_cadastrar">Cadastre-se</button>
+
+    </form>
+    <div class="textos_termo">
+        <p>Ao se cadastrar, você concorda com nossos</p>
+        <p>Termos, Política de Dados e Política de Cookies.</p>
+    </div>
+</section>
+<div class="div_conectar_conta">
+    <p>Tem uma conta? </p>
+    <a href=""> Conecte-se</a>
+</div>
+<p class="obtenha_aplicativo">Obtenha o aplicativo.</p>
+<div class="lojas_aplicativo">
+    <img src="~/assets/app_store_1.png">
+    <img src="~/assets/google_play_1.png">
+</div>
