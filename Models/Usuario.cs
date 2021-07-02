@@ -63,26 +63,6 @@ namespace InstaDev.Models
             ReescreverCSV(CAMINHO, linhas);
         }
 
-        public void AlterarNome(Usuario u)
-        {
-
-        }
-
-        public void AlterarNomeUsuario(Usuario u)
-        {
-
-        }
-
-        public void AlterarSenha(Usuario u)
-        {
-
-        }
-
-        public void AlterarImagem(Usuario u)
-        {
-
-        }
-
         public List<Usuario> Listar()
         {
             List<Usuario> usuarios = new List<Usuario>();

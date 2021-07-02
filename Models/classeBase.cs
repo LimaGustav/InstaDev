@@ -69,20 +69,5 @@ namespace InstaDev.Models
             return id;
 
         }
-
-
-        // public int GerarId(List<int> ids)
-        // {
-        //     int c = 1;
-        //     while (c <= (ids.Max() + 1))
-        //     {
-        //         if (!ids.Contains(c))
-        //         {
-        //             return c;
-        //         }
-        //         c++;
-        //     }
-        //     return c;
-        // }
     }
 }
