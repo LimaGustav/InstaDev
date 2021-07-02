@@ -18,8 +18,6 @@ namespace InstaDev.Models
         private int IdPost { get; set; }
 
         private const string CAMINHO = "Database/post.csv";
-
-        List<int> Ids = new List<int>();
         
         public Post() {
             CriarPasta(CAMINHO);
@@ -65,6 +63,15 @@ namespace InstaDev.Models
             return posts;
         }
 
+        public List<int> RetornaIds() {
+            List<int> Ids = new List<int>();
+            foreach (var item in Listar())
+            {
+                Ids.Add(item.IdPost);
+            }
+            return Ids;
+        }
+
         public void AtribuiTitulo(string _titulo) {
             Titulo = _titulo;
         }
@@ -82,7 +89,15 @@ namespace InstaDev.Models
         }
 
         public void AtribuiId() {
-            IdPost = GerarId(Ids);
+            IdPost = GerarId(RetornaIds());
+        }
+
+        public void AtribiuValores(string _titulo, string _imagem, Usuario u, DateTime d) {
+            Titulo = _titulo;
+            Imagem = _imagem;
+            PostadoPor = u;
+            HoraPostagem = d;
+            AtribuiId();
         }
     }
 }

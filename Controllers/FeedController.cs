@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using InstaDev.Models;
 using Microsoft.AspNetCore.Http;
@@ -47,6 +48,10 @@ namespace InstaDev.Controllers
             } else {
                 novoPost.AtribuiImagem("padrao.png");
             }
+
+            // FIM UPLOAD DE IMAGEM
+
+            novoPost.AtribuiHoraPostagem(DateTime.Now);
         }
     }
 }
