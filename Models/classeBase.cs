@@ -1,11 +1,15 @@
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
+using System;
 
 namespace InstaDev.Models
 {
     public class ClasseBase
     {
-        public void CriarPasta(string _caminho){
+        Random random = new Random();
+        public void CriarPasta(string _caminho)
+        {
             string pasta = _caminho.Split("/")[0];
             string arquivo = _caminho.Split("/")[1];
 
@@ -20,7 +24,8 @@ namespace InstaDev.Models
             }
         }
 
-        public List<string> LerTodasLinhasCSV(string _caminho){
+        public List<string> LerTodasLinhasCSV(string _caminho)
+        {
             List<string> linhas = new List<string>();
             using (StreamReader file = new StreamReader(_caminho))
             {
@@ -33,15 +38,51 @@ namespace InstaDev.Models
             return linhas;
         }
 
-        public void ReescreverCSV(string _caminho, List<string> linhas){
+        public void ReescreverCSV(string _caminho, List<string> linhas)
+        {
 
             using (StreamWriter output = new StreamWriter(_caminho))
             {
                 foreach (var item in linhas)
                 {
-                   output.Write(item + "\n"); 
+                    output.Write(item + "\n");
                 }
             }
         }
+
+        public int GerarId(List<int> ids)
+        {
+            int id;
+
+            do
+            {
+                id = random.Next(1,10000);
+
+                if (!ids.Contains(id))
+                {
+                    return id;
+                }
+
+
+            } while (ids.Contains(id));
+
+            return id;
+
+        }
+
+
+        // public int GerarId(List<int> ids)
+        // {
+        //     int c = 1;
+        //     while (c <= (ids.Max() + 1))
+        //     {
+        //         if (!ids.Contains(c))
+        //         {
+        //             return c;
+        //         }
+        //         c++;
+        //     }
+        //     return c;
+        // }
     }
 }

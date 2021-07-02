@@ -8,8 +8,9 @@ namespace InstaDev.Controllers
     [Route("Usuario")]
     public class CadastroController : Controller
     {
-        Usuario UsuarioModel = new Usuario();
+        [TempData]
         public string Mensagem { get; set; }
+        Usuario UsuarioModel = new Usuario();
 
         [Route("Index")]
         public IActionResult Index()
@@ -24,40 +25,29 @@ namespace InstaDev.Controllers
             Usuario novoUsuario = new Usuario();
 
             List<string> UsuariosCSV = UsuarioModel.LerTodasLinhasCSV("Database/Usuario.csv");
-            novoUsuario.AtribuirEmail(form["Email"]);
-            novoUsuario.AtribuirNome(form["Nome"]);
-            novoUsuario.AtribuirNomeUsuario(form["NomeUsuario"]);
-            novoUsuario.AtribuirSenha(form["Senha"]);
 
-            var verificarEmail = UsuariosCSV.Find(
+            var usuarioJaCadastrado = UsuariosCSV.Find(
                 x =>
                 x.Split(";")[0] == form["Email"]
             );
 
-            var verificarNomeUsuario = UsuariosCSV.Find(
-                x =>
-                x.Split(";")[2] == form["NomeUsuario"]
-            );
-
-            if (verificarEmail != null && verificarNomeUsuario != null)
+            if (usuarioJaCadastrado == null)
             {
+                novoUsuario.AtribuirEmail(form["Email"]);
+                novoUsuario.AtribuirNome(form["Nome"]);
+                novoUsuario.AtribuirNomeUsuario(form["NomeUsuario"]);
+                novoUsuario.AtribuirSenha(form["Senha"]);
+                novoUsuario.AtribuirFoto("padrao.png");
+                novoUsuario.AtribuirID();
+
                 UsuarioModel.Criar(novoUsuario);
-                Mensagem = "Parábens, você está cadastrado";
+                return LocalRedirect("~/Usuario/Index");
             }
-            else if (verificarEmail == null && verificarNomeUsuario != null)
+            else
             {
                 Mensagem = "Email já cadastrado";
+                return LocalRedirect("~/Usuario/Index");
             }
-            else if (verificarEmail != null && verificarNomeUsuario == null)
-            {
-                Mensagem = "Nome de usuário já cadastrado";
-            }
-            else if (verificarEmail == null && verificarNomeUsuario == null)
-            {
-                Mensagem = "Nome de usuário e Email já cadastrados";
-            }
-
-            return LocalRedirect("~/Usuario/Index");
         }
     }
 }
