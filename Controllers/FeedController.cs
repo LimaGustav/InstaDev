@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InstaDev.Controllers
 {
-    [Route("Post")]
+    [Route("Feed")]
     public class FeedController : Controller
     {
         Post postModel = new Post();
@@ -52,6 +52,8 @@ namespace InstaDev.Controllers
             // FIM UPLOAD DE IMAGEM
 
             novoPost.AtribuiHoraPostagem(DateTime.Now);
+
+            return LocalRedirect("~/Feed/Listar");
         }
     }
 }
