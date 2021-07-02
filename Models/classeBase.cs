@@ -1,11 +1,13 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace InstaDev.Models
 {
     public class ClasseBase
     {
+        Random intrand = new Random();
         public void CriarPasta(string _caminho){
             string pasta = _caminho.Split("/")[0];
             string arquivo = _caminho.Split("/")[1];
@@ -45,17 +47,31 @@ namespace InstaDev.Models
             }
         }
 
-        public int GerarId(List<int> ids){
-            int c = 1;
-            while (c <= (ids.Max()+1))
+        public int GerarId(List<int> ids) {
+            int id;
+            do
             {
-                if (!ids.Contains(c))
+                id = intrand.Next(1,10000);
+                if (!ids.Contains(id))
                 {
-                    return c;
+                    return id;
                 }
-                c++;
-            }
-            return c;
+            } while (ids.Contains(id));
+            return id;
         }
+
+        // Necessario instanciar um primeiro post como padrão
+        // public int GerarId(List<int> ids){
+        //     int c = 1;
+        //     while (c <= (ids.Max()+1))
+        //     {
+        //         if (!ids.Contains(c))
+        //         {
+        //             return c;
+        //         }
+        //         c++;
+        //     }
+        //     return c;
+        // }
     }
 }

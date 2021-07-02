@@ -17,7 +17,7 @@ namespace InstaDev.Models
 
         private int IdPost { get; set; }
 
-        private const string CAMINHO = "Database/post.csv";
+        private const string CAMINHO = "Database/Post.csv";
         
         public Post() {
             CriarPasta(CAMINHO);
