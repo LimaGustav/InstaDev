@@ -245,7 +245,8 @@ main {
 }
 
 .imgdesc_input {
-    width: 231px;
+    width: 100%;
+    max-width: 231px;
     height: 27px;
 
     background: #FAFAFA;
@@ -256,7 +257,8 @@ main {
 }
 
 .img_input {
-    width: 157px;
+    width: 100%;
+    max-width: 157px;
     height: 27px;
 
     background: #D1D1D1;
@@ -275,7 +277,8 @@ main {
 }
 
 .btn_postar {
-    width: 140px;
+    width: 100%;
+    max-width: 140px;
     height: 27px;
 
     background: #2686CC;
@@ -431,10 +434,25 @@ main {
 }
 
 @media (max-width: 590px) {
+    .postar {
+        height: 210px
+    }
     .form_post {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .imgdesc_input {
+        margin-bottom: 15px;
+    }
+
+    .btn_postar {
+        margin-top: 15px;
+    }
+
+    .post {
+        height: 550px;
     }
 }
 
@@ -453,6 +471,10 @@ main {
     .p5 {
         display: none;
     }
+
+    .post {
+        height: 500px;
+    }
 }
 
 @media (max-width: 390px) {
@@ -462,5 +484,15 @@ main {
 
     .p4 {
         display: none;
+    }
+
+    .post {
+        height: 440px;
+    }
+}
+
+@media (max-width: 300px) {
+    .post {
+        height: 420px;
     }
 }
