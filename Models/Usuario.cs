@@ -51,7 +51,7 @@ namespace InstaDev.Models
 
         public void Criar(Usuario u)
         {
-            string[] linha = { PreparaLinha(u) };
+            string[] linha = {PreparaLinha(u)};
             File.AppendAllLines(CAMINHO, linha);
         }
 
@@ -83,26 +83,22 @@ namespace InstaDev.Models
 
         }
 
-        public List<Usuario> Listar()
-        {
+        public List<Usuario> Listar() {
             List<Usuario> usuarios = new List<Usuario>();
 
-            
             string[] linhas = File.ReadAllLines(CAMINHO);
             foreach (var item in linhas)
             {
                 string[] linha = item.Split(";");
 
-                Usuario usuario = new Usuario();
-                
-                usuario.Email = linha[0];
-                usuario.Nome = linha[1];
-                usuario.NomeUsuario = linha[2];
-                usuario.Senha = linha[3];
-                usuario.Foto = linha[4];
-                usuario.IdUsuario = Int32.Parse(linha[5]);
+                Usuario user = new Usuario();
+                user.Nome = linha[0];
+                user.Email = linha[1];
+                user.NomeUsuario = linha[2];
+                user.Foto = linha[3];
+                user.IdUsuario = Int32.Parse(linha[4]);
 
-                usuarios.Add(usuario);
+                usuarios.Add(user);
             }
 
             return usuarios;
@@ -118,6 +114,10 @@ namespace InstaDev.Models
             }
 
             return Ids;
+        }
+
+        public int RetornaId() {
+            return IdUsuario;
         }
 
         public void AtribuirID()

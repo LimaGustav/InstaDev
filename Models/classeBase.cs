@@ -33,8 +33,8 @@ namespace InstaDev.Models
                 while ((linha = file.ReadLine()) != null)
                 {
                     linhas.Add(linha);
-                }
-            }
+                } 
+            } 
             return linhas;
         }
 
