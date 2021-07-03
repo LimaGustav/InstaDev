@@ -122,6 +122,10 @@ button{
     width: 8.5vw;
 }
 
+.erro {
+    color: rgb(156, 18, 82);
+}
+
 @media (max-width: 1420px){
 
     main{

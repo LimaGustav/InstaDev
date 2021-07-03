@@ -5,7 +5,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InstaDev</title>
-    <link rel="stylesheet" href="~/css/estilo.css" />
+    @switch (@ViewData["Title"])
+    {
+        case "Login":
+            <link rel="stylesheet" href="~/css/login.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+            break;
+        case "Cadastro":
+            <link rel="stylesheet" href="~/css/cadastro.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+            break;
+        case "Home Page":
+            <link rel="stylesheet" href="~/css/site.css" />
+            break;
+        default:
+            break;
+    }
 </head>
 
 <body>

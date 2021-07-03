@@ -1,0 +1,46 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="container_login">
+
+    <img class="logo" src="assets/Instadev.png" alt="logo_instadev">
+    <form>
+
+
+        <input type="email" placeholder="Email" name="Email" required>
+        <input type="password" placeholder="Senha" name="Senha" required>
+
+        <div class="erro">@TempData.Peek("Mensagem")</div>
+
+        <button type="submit">Entrar</button>
+
+    </form>
+
+    <div class="div_ou">
+
+        <hr>
+        <p>OU</p>
+        <hr>
+
+    </div>
+
+    <a class="esqueceu_senha" href="">Esqueceu a senha?</a>
+
+</section>
+
+<div class="container_fazer_cadastro">
+
+    <p>Não tem uma conta? </p>
+    <a href=""> Cadastre-se</a>
+
+</div>
+
+<p class="p_App">Obtenha o aplicativo.</p>
+<div>
+
+    <img src="assets/app_store 1.png" alt="AppStore">
+    <img src="assets/google_play 1.png" alt="PlayStore">
+
+</div>
