@@ -24,7 +24,7 @@ namespace InstaDev.Controllers
             List<string> UsuariosCSV = usuarioModel.LerTodasLinhasCSV("Database/Usuario.csv");
 
             var logado = UsuariosCSV.Find(
-                x => x.Split(";")[0] == form["Email"] &&
+                x => x.Split(";")[1] == form["Email"] &&
                 x.Split(";")[3] == form["Senha"]
             );
 
@@ -35,7 +35,7 @@ namespace InstaDev.Controllers
             }
 
             Mensagem = "Dados incorretos, tente novamente";
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
     }
 }

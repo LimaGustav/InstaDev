@@ -38,3 +38,5 @@ C:\Users\jhoww\OneDrive\Área de Trabalho\Senai\TrabalhoFinal\InstaDev\obj\Debug
 C:\Users\jhoww\OneDrive\Área de Trabalho\Senai\TrabalhoFinal\InstaDev\obj\Debug\net5.0\InstaDev.pdb
 C:\Users\jhoww\OneDrive\Área de Trabalho\Senai\TrabalhoFinal\InstaDev\obj\Debug\net5.0\InstaDev.genruntimeconfig.cache
 C:\Users\jhoww\OneDrive\Área de Trabalho\Senai\TrabalhoFinal\InstaDev\obj\Debug\net5.0\InstaDev.csproj.CopyComplete
+C:\Users\jhoww\OneDrive\Área de Trabalho\Senai\TrabalhoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Cadastro\index.cshtml.g.cs
+C:\Users\jhoww\OneDrive\Área de Trabalho\Senai\TrabalhoFinal\InstaDev\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
