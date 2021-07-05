@@ -12,7 +12,6 @@ namespace InstaDev.Controllers
         Post postModel = new Post();
         Usuario usuarioModel = new Usuario();
 
-        [Route("Listar")]
         public IActionResult Index() {
             ViewBag.Posts = postModel.Listar();
             ViewBag.Usuarios = usuarioModel.Listar();

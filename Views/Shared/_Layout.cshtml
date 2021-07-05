@@ -18,6 +18,9 @@
         case "Home Page":
             <link rel="stylesheet" href="~/css/site.css" />
             break;
+        case "Feed":
+            <link rel="stylesheet" href="~/css/feed.css" />
+            break;
         default:
             break;
     }
@@ -26,27 +29,21 @@
 <body>
     @if (ViewData["Title"].ToString() == "Feed")
     {
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">InstaDev</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home"
-                                asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        <header class="header">
+            <div class="container_header grid">
+                <a href="" target="_parent"><img class="logo_header" src="assets/instadevLogo.png" alt=""></a>
+                <form class="pesquisa_form" action="post">
+                    <input class="pesquisar" type="text" name="search" id="search" placeholder="Pesquisar" required>
+                </form>
+
+                <ul class="nav_header">
+                    <li><a class="icons_header" href=""><img src="assets/casinha.svg" alt=""></a></li>
+                    <li><a href=""><img src="assets/aviaozinho.svg" alt=""></a></li>
+                    <li><a href=""><img src="assets/bussula.svg" alt=""></a></li>
+                    <li><a href=""><img src="assets/coracao.svg" alt=""></a></li>
+                    <li><a href=""><img src="assets/perfil_pequeno.png" alt=""></a></li>
+                </ul>
+            </div>
         </header>
     }
 
