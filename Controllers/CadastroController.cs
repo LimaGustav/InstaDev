@@ -37,7 +37,7 @@ namespace InstaDev.Controllers
                 novoUsuario.AtribuirNome(form["Nome"]);
                 novoUsuario.AtribuirNomeUsuario(form["NomeUsuario"]);
                 novoUsuario.AtribuirSenha(form["Senha"]);
-                novoUsuario.AtribuirFoto("padrao.png");
+                novoUsuario.AtribuirFoto("padraoUser.png");
                 novoUsuario.AtribuirID();
 
                 UsuarioModel.Criar(novoUsuario);

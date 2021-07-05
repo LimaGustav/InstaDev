@@ -22,6 +22,9 @@ namespace InstaDev.Controllers
 
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form) {
+            ViewBag.Posts = postModel.Listar();
+            ViewBag.Usuarios = usuarioModel.Listar();
+
             Post novoPost = new Post();
 
             novoPost.AtribuiTitulo(form["TituloPost"]);
@@ -38,9 +41,9 @@ namespace InstaDev.Controllers
                     Directory.CreateDirectory(folder);
                 }
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/",folder,file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
 
-                using (var stream = new FileStream(path,FileMode.Create))
+                using (var stream = new FileStream(path, FileMode.Create))
                 {
                     file.CopyTo(stream);
                 }
@@ -54,8 +57,10 @@ namespace InstaDev.Controllers
 
             novoPost.AtribuiHoraPostagem(DateTime.Now);
 
-            Usuario secao = usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
+            Usuario secao =  usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
             novoPost.AtribuiPostadoPor(secao);
+
+            postModel.Criar(novoPost);
 
             return LocalRedirect("~/Feed");
         }

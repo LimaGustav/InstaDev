@@ -13,7 +13,6 @@ namespace InstaDev.Controllers
         
         Usuario usuarioModel = new Usuario();
 
-        [Route("Index")]
         public IActionResult Index() {
             return View();
         }
@@ -35,7 +34,7 @@ namespace InstaDev.Controllers
             }
 
             Mensagem = "Dados incorretos, tente novamente";
-            return LocalRedirect("~/Login/Index");
+            return LocalRedirect("~/Login");
         }
     }
 }
