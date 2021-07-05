@@ -7,10 +7,19 @@
         <section class="section_status">
             <div class="container_status">
 
-                <div class="perfil_status p1">
+
+                @foreach (var item in ViewBag.Usuarios)
+                {
+                    <div class="perfil_status p1">
+                        <a class="link_status" href=""><img src="@item.Foto" alt=""></a>
+                        <a href=""><span class="nomes">@item.Nome</span></a>
+                    </div>
+                }
+
+                @* <div class="perfil_status p1">
                     <a class="link_status" href=""><img src="~/assets/fotoStatus/vin-diesel.png" alt=""></a>
                     <a href=""><span class="nomes">vin-disel</span></a>
-                </div>
+                    </div> *@
                 <div class="perfil_status p2">
                     <a class="link_status" href=""><img src="~/assets/fotoStatus/gabigordo.png" alt=""></a>
                     <a href=""><span class="nomes">gabigordo</span></a>
@@ -35,14 +44,15 @@
                     <a class="link_status" href=""><img src="~/assets/fotoStatus/chaves_metal.png" alt=""></a>
                     <a href=""><span class="nomes">chaves_metal</span></a>
                 </div>
+
             </div>
         </section>
         <!-- PERFIL ASIDE -->
         <aside class="perfil">
-            <a class="foto_perfil" href=""><img src="~/assets/fotoStatus/thank-you.png" alt=""></a>
+            <a class="foto_perfil" href=""><img src="" alt="">@ViewBag.Secao.Foto</a>
             <div class="texto_perfil">
-                <span class="user">yes_baby</span>
-                <span class="nome">Marcos Jeeves</span>
+                <span class="user">@ViewBag.Secao</span>
+                <span class="nome">@ViewBag.Secao</span>
             </div>
         </aside>
     </div>
@@ -56,7 +66,8 @@
                     <span>Postar</span>
                 </div>
                 <form class="form_post" action="post">
-                    <input class="imgdesc_input" type="text" name="TituloPost" placeholder="Digite a descrição da imagem">
+                    <input class="imgdesc_input" type="text" name="TituloPost"
+                        placeholder="Digite a descrição da imagem">
 
                     <label class="img_input" for="file">Escolha a imagem</label>
                     <input class="none" type="file" name="file" id="file">

@@ -6,10 +6,10 @@ namespace InstaDev.Models
 {
     public class Usuario : ClasseBase
     {
-        private string Nome { get; set; }
+        public string Nome { get; set; }
         private string Email { get; set; }
         private string NomeUsuario { get; set; }
-        private string Foto { get; set; }
+        public string Foto { get; set; }
         private int IdUsuario { get; set; }
         private string Senha { get; set; }
         private const string CAMINHO = "Database/Usuario.csv";
@@ -119,6 +119,10 @@ namespace InstaDev.Models
 
         public int RetornaId() {
             return IdUsuario;
+        }
+
+        public string RetornaNomeUsuario () {
+            return NomeUsuario;
         }
 
         public void AtribuirID()

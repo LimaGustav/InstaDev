@@ -11,8 +11,10 @@ namespace InstaDev.Controllers
     {
         Post postModel = new Post();
         Usuario usuarioModel = new Usuario();
-
+        
         public IActionResult Index() {
+            Usuario secao =  usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
+            ViewBag.Secao = secao;
             ViewBag.Posts = postModel.Listar();
             ViewBag.Usuarios = usuarioModel.Listar();
             return View();
@@ -52,11 +54,10 @@ namespace InstaDev.Controllers
 
             novoPost.AtribuiHoraPostagem(DateTime.Now);
 
-            novoPost.AtribuiPostadoPor(
-                usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId"))) 
-                );
+            Usuario secao = usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
+            novoPost.AtribuiPostadoPor(secao);
 
-            return LocalRedirect("~/Feed/Listar");
+            return LocalRedirect("~/Feed");
         }
     }
 }

@@ -41,7 +41,7 @@ namespace InstaDev.Controllers
                 novoUsuario.AtribuirID();
 
                 UsuarioModel.Criar(novoUsuario);
-                return LocalRedirect("~/Usuario/Index");
+                return LocalRedirect("~/Login");
             }
             else
             {
