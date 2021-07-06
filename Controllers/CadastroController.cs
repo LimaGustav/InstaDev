@@ -12,7 +12,6 @@ namespace InstaDev.Controllers
         public string Mensagem { get; set; }
         Usuario UsuarioModel = new Usuario();
 
-        [Route("Index")]
         public IActionResult Index()
         {
             ViewBag.Usuarios = UsuarioModel.Listar();
@@ -46,7 +45,7 @@ namespace InstaDev.Controllers
             else
             {
                 Mensagem = "Email já cadastrado";
-                return LocalRedirect("~/Usuario/Index");
+                return LocalRedirect("~/Usuario");
             }
         }
     }
