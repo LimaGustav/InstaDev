@@ -21,6 +21,9 @@
         case "Feed":
             <link rel="stylesheet" href="~/css/feed.css" />
             break;
+        case "edicaoPerfil":
+            <link rel="stylesheet" href="~/css/edicaoPerfil.css" />
+        break;
         default:
             break;
     }
@@ -41,7 +44,7 @@
                     <li><a href=""><img src="assets/aviaozinho.svg" alt=""></a></li>
                     <li><a href=""><img src="assets/bussula.svg" alt=""></a></li>
                     <li><a href=""><img src="assets/coracao.svg" alt=""></a></li>
-                    <li><a href=""><img src="assets/perfil_pequeno.png" alt=""></a></li>
+                    <li><a asp-area="" asp-controller="edicaoPerfil" asp-action="Index"><img src="assets/perfil_pequeno.png" alt=""></a></li>
                 </ul>
             </div>
         </header>

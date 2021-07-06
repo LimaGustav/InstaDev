@@ -65,7 +65,10 @@ namespace InstaDev.Models
 
         public void Alterar(Usuario u)
         {
-
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[5] == u.IdUsuario.ToString());
+            linhas.Add(PreparaLinha(u));
+            ReescreverCSV(CAMINHO,linhas);
         }
 
         public List<Usuario> Listar() {
@@ -106,6 +109,10 @@ namespace InstaDev.Models
             return IdUsuario;
         }
 
+        public string RetornaEmail() {
+            return Email;
+        }
+
         public string RetornaNomeUsuario () {
             return NomeUsuario;
         }
@@ -113,6 +120,11 @@ namespace InstaDev.Models
         public void AtribuirID()
         {
             IdUsuario = GerarId(ReturnIds());
+        }
+
+        public void AtribuirID(int id)
+        {
+            IdUsuario = id;
         }
 
     }
