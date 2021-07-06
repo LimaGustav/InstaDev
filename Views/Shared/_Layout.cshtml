@@ -5,11 +5,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InstaDev</title>
-    <link rel="stylesheet" href="~/css/estilo.css" />
+    @if (ViewData["Title"].ToString() == "Cadastro")
+    {
+        <link rel="stylesheet" href="~/css/cadastro.css" />
+    }
+    @if (ViewData["Title"].ToString() == "Perfil")
+    {
+        <link rel="stylesheet" href="~/css/perfil.css" />
+    }
+    @if (ViewData["Title"].ToString() == "Feed")
+    {
+        <link rel="stylesheet" href="~/css/feed.css" />
+    }
+    @if (ViewData["Title"].ToString() == "Login")
+    {
+        <link rel="stylesheet" href="~/css/login.css" />
+    }
+    
 </head>
 
 <body>
-    @if (ViewData["Title"].ToString() == "Feed")
+    @if (ViewData["Title"].ToString() == "Feed" && ViewData["Title"].ToString() == "Perfil" && ViewData["Title"].ToString() == "EdicaoPerfil")
     {
         <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -41,7 +57,7 @@
         </main>
     </div>
 
-    @if (ViewData["Title"].ToString() == "Feed")
+    @if (ViewData["Title"].ToString() == "Feed" && ViewData["Title"].ToString() == "Perfil" && ViewData["Title"].ToString() == "EdicaoPerfil")
     {
         <footer class="border-top footer text-muted">
             <div class="container">

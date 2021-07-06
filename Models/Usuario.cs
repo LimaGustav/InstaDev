@@ -6,10 +6,10 @@ namespace InstaDev.Models
 {
     public class Usuario : ClasseBase
     {
-        private string Nome { get; set; }
+        public string Nome { get; private set; }
         private string Email { get; set; }
-        private string NomeUsuario { get; set; }
-        private string Foto { get; set; }
+        public string NomeUsuario { get; private set; }
+        public string Foto { get; private set; }
         private int IdUsuario { get; set; }
         private string Senha { get; set; }
         private const string CAMINHO = "Database/Usuario.csv";
@@ -61,11 +61,6 @@ namespace InstaDev.Models
             linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
 
             ReescreverCSV(CAMINHO, linhas);
-        }
-
-        public void Alterar(Usuario u)
-        {
-
         }
 
         public List<Usuario> Listar()
