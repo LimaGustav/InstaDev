@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Source+Code+Pro:wght@500&display=swap');* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #E5E5E5;
+
+   
+}
+
+
+.container-erro{
+    /* background-color: blue; */
+    width: 1800px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box-container-erro{
+    height: 580px;
+    width: 1100px;
+    /* background-color:rgb(234, 243, 255); */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: 28px 38px 5px 3px rgba(0,0,0,0.34);
+}
+
+.erro{
+    animation: gradient 10s ease alternate infinite;
+    background: linear-gradient(-45deg, #636ebe, #e8f5c8) no-repeat;
+    background-size: 300% 300%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 155px;
+    width: 540px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    
+    
+}
+
+@keyframes gradient {
+    from {
+        background-position: 0 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+.texto-erro{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 560px;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+.box-info{
+    display: flex;
+}
+
+.foto{
+    width: 65px;
+    height: 65px;
+    background-color: grey;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.info-user{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-left: 30px;
+}
+
+.info-user h3 {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.info-user h4 {
+    font-weight: normal;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+hr {
+    margin-top: 10px;
+    width: 500px;
+    background-color: grey;
+    height: 2p;
+}
+.info-erro {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+
+}
+
+.interacoes {
+    width: 100px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.interacoes h4 {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+.botoes {
+    display: flex;
+}
+
+.botoes button {
+    border: none;
+    width: 25px;
+    height: 25px;
+}
+
+.botoes button img {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: none;
+}
+
+.icon-comentario {
+    margin-left: 20px;
+}
+
+.ver-comentario{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(102, 102, 102);
+}
