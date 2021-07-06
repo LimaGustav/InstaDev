@@ -63,6 +63,13 @@ namespace InstaDev.Models
             ReescreverCSV(CAMINHO, linhas);
         }
 
+        public void Alterar(Usuario u) {
+            List<string> linhas = LerTodasLinhasCSV(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[5] == u.IdUsuario.ToString());
+            linhas.Add(PreparaLinha(u));
+            ReescreverCSV(CAMINHO,linhas);
+        }
+
         public List<Usuario> Listar()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -101,6 +108,10 @@ namespace InstaDev.Models
 
         public int RetornaId() {
             return IdUsuario;
+        }
+
+        public string RetornaEmail() {
+            return Email;
         }
 
         public string RetornaNomeUsuario () {
