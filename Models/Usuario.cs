@@ -6,11 +6,11 @@ namespace InstaDev.Models
 {
     public class Usuario : ClasseBase
     {
-        private string Nome { get; set; }
+        public string Nome { get; private set; }
         private string Email { get; set; }
-        private string NomeUsuario { get; set; }
-        private string Foto { get; set; }
-        private int IdUsuario { get; set; }
+        public string NomeUsuario { get; private set; }
+        public string Foto { get; private set; }
+        public int IdUsuario { get; private set; }
         private string Senha { get; set; }
         private const string CAMINHO = "Database/Usuario.csv";
 
@@ -63,38 +63,18 @@ namespace InstaDev.Models
             ReescreverCSV(CAMINHO, linhas);
         }
 
-        public void AlterarNome(Usuario u)
-        {
-
-        }
-
-        public void AlterarNomeUsuario(Usuario u)
-        {
-
-        }
-
-        public void AlterarSenha(Usuario u)
-        {
-
-        }
-
-        public void AlterarImagem(Usuario u)
-        {
-
-        }
-
         public List<Usuario> Listar()
         {
             List<Usuario> usuarios = new List<Usuario>();
 
-            
+
             string[] linhas = File.ReadAllLines(CAMINHO);
             foreach (var item in linhas)
             {
                 string[] linha = item.Split(";");
 
                 Usuario usuario = new Usuario();
-                
+
                 usuario.Email = linha[0];
                 usuario.Nome = linha[1];
                 usuario.NomeUsuario = linha[2];
@@ -118,6 +98,16 @@ namespace InstaDev.Models
             }
 
             return Ids;
+        }
+
+        public int RetornaId()
+        {
+            return IdUsuario;
+        }
+
+        public string RetornaNomeUsuario()
+        {
+            return NomeUsuario;
         }
 
         public void AtribuirID()

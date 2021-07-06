@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gumig\\Desktop\\InstaDev\\InstaDev.csproj": {}
+    "C:\\Users\\dev\\Desktop\\InstaDev\\InstaDev.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gumig\\Desktop\\InstaDev\\InstaDev.csproj": {
+    "C:\\Users\\dev\\Desktop\\InstaDev\\InstaDev.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gumig\\Desktop\\InstaDev\\InstaDev.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Desktop\\InstaDev\\InstaDev.csproj",
         "projectName": "InstaDev",
-        "projectPath": "C:\\Users\\gumig\\Desktop\\InstaDev\\InstaDev.csproj",
-        "packagesPath": "C:\\Users\\gumig\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gumig\\Desktop\\InstaDev\\obj\\",
+        "projectPath": "C:\\Users\\dev\\Desktop\\InstaDev\\InstaDev.csproj",
+        "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dev\\Desktop\\InstaDev\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gumig\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

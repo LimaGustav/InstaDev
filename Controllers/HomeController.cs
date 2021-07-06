@@ -20,7 +20,7 @@ namespace InstaDev.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return LocalRedirect("~/Login");
         }
 
         public IActionResult Privacy()
