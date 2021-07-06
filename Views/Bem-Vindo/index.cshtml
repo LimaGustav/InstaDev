@@ -1,0 +1,69 @@
+<div class="logo"> <img src="assets/instadevLogo.png" alt=""></div>
+        <section class="container">
+
+            <class class="welcome">
+                <h1>Bem Vindo!</h1>
+                <span>@ViewData["User-welcome"]</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aliquid repellat rem adipisci blanditiis?
+                    Modi nesciunt eius doloribus, ipsam dolorem esse. Alias explicabo mollitia quo dolores ratione, sed
+                    sapiente! In.</p>
+                <br>
+                <button class="iniciar" type="submit">INICIAR</button>
+            </class>
+
+
+            <section class="album-marquee">
+                <div class="img-marquee foto-1">1</div>
+                <div class="img-marquee foto-2">2</div>
+                <div class="img-marquee foto-3">3</div>
+                <div class="img-marquee foto-4">4</div>
+
+                <div class="img-marquee foto-5">5</div>
+                <div class="img-marquee foto-6">6</div>
+                <div class="img-marquee foto-7">7</div>
+                <div class="img-marquee foto-8">8</div>
+
+                <div class="img-marquee foto-1">1</div>
+                <div class="img-marquee foto-2">2</div>
+
+                <div class="img-marquee foto-3">3</div>
+                <div class="img-marquee foto-4">4</div>
+
+            </section>
+            <section class="album-marquee-2">
+                <div class="img-marquee-2 foto-1">1</div>
+                <div class="img-marquee-2 foto-2">2</div>
+                <div class="img-marquee-2 foto-3">3</div>
+                <div class="img-marquee-2 foto-4">4</div>
+
+                <div class="img-marquee-2 foto-5">5</div>
+                <div class="img-marquee-2 foto-6">6</div>
+                <div class="img-marquee-2 foto-7">7</div>
+                <div class="img-marquee-2 foto-8">8</div>
+
+                <div class="img-marquee-2 foto-1">1</div>
+                <div class="img-marquee-2 foto-2">2</div>
+
+                <div class="img-marquee-2 foto-3">3</div>
+                <div class="img-marquee-2 foto-4">4</div>
+
+            </section>
+        </section>
+        <script>
+            function typeWrite(elemento) {
+
+                const textoArray = elemento.innerHTML.split('');
+
+                elemento.innerHTML = '';
+
+                textoArray.forEach((letra, i) => {
+                    setTimeout(function () {
+                        elemento.innerHTML += letra;
+                    }, 98 * i)
+                })
+            }
+            // const spanNome = document.querySelector('p');
+            // typeWrite(spanNome)
+
+            typeWrite(document.querySelector('span'))
+        </script>

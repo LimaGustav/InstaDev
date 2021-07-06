@@ -158,3 +158,191 @@ hr {
     font-family: 'Roboto', sans-serif;
     color: rgb(102, 102, 102);
 }
+/*pagina de boas vindas*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 53px;
+    
+    background-color: white;
+}
+.logo img{
+    margin: 10px 150px;
+
+    width:88px;
+    height: 37px;
+}
+.container{
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.welcome
+{
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    flex-direction: column;
+    /* background-color: cadetblue; */
+    color: black;
+    height: 612px;
+    width: 50%;
+    margin-right: 80px;
+}
+.welcome h1{
+    font-size: 50px;
+}
+
+.welcome span{
+    font-size: 100px;
+    text-transform: uppercase;
+    
+}
+.welcome span::after{
+    content: "|";
+    margin-left: 5px;
+    opacity: 1;
+    
+    animation:pisca 1s infinite;
+    
+}
+@keyframes pisca {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.welcome p{
+    font-size: 30px;
+}
+.iniciar{
+    width: 150px;
+    background-color: rgb(51, 111, 232);
+    color: white;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    height: 50px;
+    border-radius: 5px;
+    margin: 70px 0 25px 0;
+    border: none
+
+}
+.album-marquee, .album-marquee-2{
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transform: skewX(-10deg);
+    position: relative;
+    background-color: white;
+ 
+}
+.album-marquee::before, .album-marquee::after, .album-marquee-2::before, .album-marquee-2::after{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100px;
+    content: '';
+    /* z-index:1; */
+}
+/* .album-marquee::before, .album-marquee-2::before{
+    bottom: 0;
+    background: linear-gradient(to top, white 0%, transparent 100%);
+} */
+.album-marquee::after, .album-marquee-2::after{
+    top: 0;
+    background: linear-gradient(to bottom, white 0%, transparent 100%);
+}
+/* .album-marquee{
+    background-color: green;
+}
+.album-marquee-2{
+    background-color: blue;
+    
+} */
+.img-marquee, .img-marquee-2{
+    font-size: 55px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:20px;
+    margin-top: 25px;
+    height: 450px;
+    width: 300px;
+    /* border: 3px solid teal; */
+    flex-shrink: 0;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+
+}
+
+.img-marquee{
+    animation: scrolling 98s linear infinite;
+}
+.img-marquee-2{
+    animation: scrolling-2 60s linear infinite;
+    
+}
+
+
+
+
+@keyframes scrolling{
+    0% { transform: translatey(0px)}
+    100% {transform: translatey(-3800px);}
+}
+@keyframes scrolling-2{
+    0% { transform: translatey(-45px)}
+    100% {transform: translatey(-3845px);}
+}
+
+
+.foto-1{
+    background-image: url(/assets/1.jfif)
+}
+.foto-2{
+    background-image: url(/assets/1.jfif);
+}
+.foto-3{
+    background-image: url(/assets/2.jfif);
+}
+.foto-4{
+    background-image: url(/assets/3.jfif)
+}
+.foto-5{
+    background-image: url(/assets/4.jfif);
+}
+.foto-6{
+    background-image: url(/assets/5.jfif);
+}
+.foto-7{
+    background-image: url(/assets/6.jfif)
+}
+.foto-8{
+    background-image: url(/assets/7.jpg);
+}
+/*fim (bem vindo)*/
