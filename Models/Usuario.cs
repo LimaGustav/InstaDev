@@ -115,5 +115,9 @@ namespace InstaDev.Models
             IdUsuario = GerarId(ReturnIds());
         }
 
+        public void AtribuirId(int id) {
+            IdUsuario = id;
+        }
+
     }
 }

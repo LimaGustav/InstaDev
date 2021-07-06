@@ -11,6 +11,7 @@ namespace InstaDev.Controllers
 {
     public class HomeController : Controller
     {
+        public Usuario usuarioModel = new Usuario();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
