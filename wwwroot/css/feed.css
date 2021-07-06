@@ -92,6 +92,13 @@ a {
     height: min-content;
 }
 
+.foto_header {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+}
+
 /* SECTION STATUS */
 
 main {
