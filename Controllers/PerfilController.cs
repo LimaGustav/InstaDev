@@ -1,3 +1,4 @@
+using System;
 using InstaDev.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +14,12 @@ namespace InstaDev.Controllers
         [Route("Usuario")]
         public IActionResult Index()
         {
+            Usuario secao =  usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
+            
             ViewBag.Posts = postModel.Listar();
             ViewBag.Usuario = usuarioModel.Listar();
-            ViewBag.NomeUsuario = HttpContext.Session.GetString("_nomeUsuario");
-            ViewBag.Nome = HttpContext.Session.GetString("_nome");
-            ViewBag.Foto = HttpContext.Session.GetString("_foto");
+            ViewBag.Secao = secao;
+
             return View();
         }
     }
