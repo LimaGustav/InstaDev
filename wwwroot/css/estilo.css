@@ -325,24 +325,62 @@ body{
     background-image: url(/assets/1.jfif)
 }
 .foto-2{
-    background-image: url(/assets/1.jfif);
+    background-image: url(/assets/ab32f788f9614de8ccaf601e633b9916.jpg);
+    background-position: center;
+    background-size: cover;
 }
 .foto-3{
     background-image: url(/assets/2.jfif);
+    background-position: center;
 }
 .foto-4{
-    background-image: url(/assets/3.jfif)
+    background-image: url(/assets/c60167a6660a05faa896015fa111b978.jpg);
+    background-position: center;
+    
 }
 .foto-5{
-    background-image: url(/assets/4.jfif);
+    background-image: url(/assets/gg.jpg);
 }
 .foto-6{
-    background-image: url(/assets/5.jfif);
+    background-image: url(/assets/skate.jpg);
+   background-position: center;
+   
 }
 .foto-7{
-    background-image: url(/assets/6.jfif)
+    background-image: url(/assets/a58eecc8f8e96194a81d5dacb98b5099.jpg)
 }
 .foto-8{
     background-image: url(/assets/7.jpg);
 }
+.album-marquee-2 .foto-1{
+    background-image: url(/assets/07c1f189d7679bfc0590e56537146d9b.jpg);
+}
+.album-marquee-2 .foto-2{
+    background-image: url(/assets/3.jfif);
+
+}
+.album-marquee-2 .foto-3{
+    background-image: url(/assets/7.jpg);
+}
+.album-marquee-2 .foto-4{
+    background-image:url(/assets/fg.jpg);
+    background-position: center;
+}
+.album-marquee-2 .foto-5{
+    background-image: url(/assets/0.jpeg);
+    background-position: center;
+}
+
+.album-marquee-2 .foto-6{
+    background-image: url(/assets/bc14150c1513cfcac51293ca1aafa94a.jpg);
+    
+}
+.album-marquee-2 .foto-7{
+    background-image: url(assets/82c6940873bd4d1cd3c1c92d4df24e2d.jpg);
+    /* background-position: center; */
+}
+.album-marquee-2 .foto-8{
+    background-image: url(/assets/c6bf47d6fc9a88ee296f35923d362b61.jpg);
+}
+
 /*fim (bem vindo)*/
