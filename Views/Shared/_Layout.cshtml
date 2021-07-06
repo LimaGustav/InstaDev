@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InstaDev</title>
+    @switch (@ViewData["Title"])
+    {
+        case "Login":
+            <link rel="stylesheet" href="~/css/login.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+            break;
+        case "Cadastro":
+            <link rel="stylesheet" href="~/css/cadastro.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+            break;
+        case "Home Page":
+            <link rel="stylesheet" href="~/css/site.css" />
+            break;
+        case "Feed":
+            <link rel="stylesheet" href="~/css/feed.css" />
+            break;
+        case "edicaoPerfil":
+            <link rel="stylesheet" href="~/css/edicaoPerfil.css" />
+        break;
+        default:
+            break;
+    }
+</head>
+
+<body>
+    @if (ViewData["Title"].ToString() == "Feed")
+    {
+        <header class="header">
+            <div class="container_header grid">
+                <a href="" target="_parent"><img class="logo_header" src="assets/instadevLogo.png" alt=""></a>
+                <form class="pesquisa_form" action="post">
+                    <input class="pesquisar" type="text" name="search" id="search" placeholder="Pesquisar" required>
+                </form>
+
+                <ul class="nav_header">
+                    <li><a class="icons_header" href=""><img src="assets/casinha.svg" alt=""></a></li>
+                    <li><a href=""><img src="assets/aviaozinho.svg" alt=""></a></li>
+                    <li><a href=""><img src="assets/bussula.svg" alt=""></a></li>
+                    <li><a href=""><img src="assets/coracao.svg" alt=""></a></li>
+                    <li><a asp-area="" asp-controller="edicaoPerfil" asp-action="Index"><img src="assets/perfil_pequeno.png" alt=""></a></li>
+                </ul>
+            </div>
+        </header>
+    }
+
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @if (ViewData["Title"].ToString() == "Feed")
+    {
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - InstaDev - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    }
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
