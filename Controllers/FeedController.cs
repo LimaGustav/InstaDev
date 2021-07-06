@@ -58,7 +58,8 @@ namespace InstaDev.Controllers
             novoPost.AtribuiHoraPostagem(DateTime.Now);
 
             int IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UsuarioId"));
-            Usuario dono =  usuarioModel.Listar().Find(x => x.RetornaId() == IdUsuario);
+            Usuario dono = usuarioModel.Listar().Find(x => x.IdUsuario == IdUsuario);
+
             novoPost.AtribuiPostadoPor(dono);
 
             postModel.Criar(novoPost);

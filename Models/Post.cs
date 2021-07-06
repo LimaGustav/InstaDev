@@ -9,9 +9,9 @@ namespace InstaDev.Models
     {
         private string Titulo { get; set; }
         
-        private string Imagem { get; set; }
+        public string Imagem { get; private set; }
         
-        private Usuario PostadoPor { get; set; }
+        public Usuario PostadoPor { get; private set; }
         
         private DateTime HoraPostagem { get; set; }
 
@@ -24,7 +24,7 @@ namespace InstaDev.Models
         }
 
         public string PrepararPost(Post p) {
-            return $"{p.Titulo};{p.Imagem};{p.PostadoPor.RetornaId().ToString()};{p.HoraPostagem.ToString()};{p.IdPost.ToString()}";
+            return $"{p.Titulo};{p.Imagem};{p.PostadoPor.IdUsuario};{p.HoraPostagem.ToString()};{p.IdPost.ToString()}";
         }
 
         public void Criar(Post p)

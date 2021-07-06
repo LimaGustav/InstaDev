@@ -1,0 +1,118 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+<div class="container">
+    <section class="cabecalho_perfil">
+        <img class="foto_perfil" src="/img/@ViewBag.Foto" alt="">
+        <div class="info_escrita_perfil">
+            
+            <h1>@ViewBag.Secao.Nome</h1>
+            <div class="informacoes_perfil">
+                <h2 class="primeiro_h2">0 publicações</h2>
+                <h2 class="segundo_h2">128 seguindo</h2>
+                <h2 class="terceiro_h2">214 seguidores</h2>
+            </div>
+            <div class="links_perfil">
+                <h2>@ViewBag.Secao.NomeUsuario</h2>
+                <a asp-area="" asp-controller="EditarPerfil" asp-action="Index">Editar Perfil</a>
+                <a asp-area="" asp-controller="Login" asp-action="Logout" target="_parent">Sair</a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <div class="publicacoes_quadradinhos">
+        <img src="~/assets/quadradinhos.svg">
+        <h2>publicações</h2>
+    </div>
+
+    <section class="publicacoes">
+        @foreach (Post post in ViewBag.Posts)
+        {
+            if (post.PostadoPor.IdUsuario ==
+             ViewBag.Secao.IdUsuario)
+            {
+                <div class="post">
+                    <img src="~/img/Posts/@post.Imagem" alt="">
+                    <div class="texto_publicacao">
+                        <div class="fotinha_usuario">
+                            <img src="/img/@ViewBag.Foto">
+                            <div class="info_foto_usuario">
+                                <h3>@ViewBag.Secao.NomeUsuario</h3>
+                                <h4>Rio de Janeiro, Brazil</h4>
+                            </div>
+                        </div>
+                        <div class="interacoes">
+                            <div class="botoes">
+                                <button class="coracao_maior">
+                                    <img src="~/assets/coracao.svg" alt="">
+                                </button>
+                                <button class="balao_comentarios">
+                                    <img src="~/assets/comentario.svg" alt="">
+                                </button>
+                            </div>
+                            <h4>1954 curtidas</h4>
+                        </div>
+                        <div class="comentarios">
+
+                            <div class="comentario">
+                                <span>
+                                    fausto_silva
+                                </span>
+                                <p>
+                                    Esse cara é fera bixo!!!
+                                </p>
+                                <button class="coracao_menor">
+                                    <img src="~/assets/coracao.svg" alt="">
+                                </button>
+                            </div>
+
+                            <div class="resposta_comentario">
+                                <span>
+                                    yes_baby
+                                </span>
+                                <p>
+                                    thank you
+                                </p>
+                                <button class="coracao_menor_resposta_comentario">
+                                    <img src="~/assets/coracao.svg" alt="">
+                                </button>
+                            </div>
+
+                            <div class="comentario">
+                                <span>
+                                    adriano_stark
+                                </span>
+                                <p>
+                                    Quando eu adormecer, vou sonhar com você. É sempre com você.
+                                </p>
+                                <button class="coracao_menor">
+                                    <img src="~/assets/coracao.svg" alt="">
+                                </button>
+                            </div>
+
+                            <div class="resposta_comentario">
+                                <span>
+                                    yes_baby
+                                </span>
+                                <p>
+                                    Yes baby!!!
+                                </p>
+                                <button class="coracao_menor_resposta_comentario">
+                                    <img src="~/assets/coracao.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="classe_ver_comentarios">
+                            <a>Ver todos os comentários</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </section>
+</div>

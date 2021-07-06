@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    @if (ViewData["Title"].ToString() == "Feed")
+    @if (ViewData["Title"].ToString() == "Feed" || ViewData["Title"].ToString() == "Perfil" || ViewData["Title"].ToString() == "EdicaoPerfil")
     {
         <header class="header">
             <div class="container_header grid">
@@ -53,7 +53,7 @@
         </main>
     </div>
 
-    @if (ViewData["Title"].ToString() == "Feed")
+    @if (ViewData["Title"].ToString() == "Feed" && ViewData["Title"].ToString() == "Perfil" && ViewData["Title"].ToString() == "EdicaoPerfil")
     {
         <footer class="border-top footer text-muted">
             <div class="container">
