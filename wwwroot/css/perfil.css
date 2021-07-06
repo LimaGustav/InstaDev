@@ -109,6 +109,7 @@ a {
 }
 
 .foto_perfil{
+    border-radius: 50%;
     width: 150px;
     margin-right: 100px;
 }
@@ -202,6 +203,10 @@ h2{
 .fotinha_usuario img{
     width: 65px;
     height: 65px;
+}
+
+.redondo {
+    border-radius: 50%;
 }
 
 .info_foto_usuario{

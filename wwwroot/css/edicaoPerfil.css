@@ -186,6 +186,7 @@ hr {
 }
 
 .container_img img {
+    border-radius: 50%;
     margin-right: 21px;
     height: 50px;
     width: 50px;

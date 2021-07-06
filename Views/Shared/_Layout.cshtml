@@ -20,12 +20,15 @@
             break;
         case "Feed":
             <link rel="stylesheet" href="~/css/feed.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
             break;
         case "Perfil":
             <link rel="stylesheet" href="~/css/perfil.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
             break;
-        case "edicaoPerfil":
+        case "EdicaoPerfil":
             <link rel="stylesheet" href="~/css/edicaoPerfil.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
             break;
         default:
             break;
@@ -37,16 +40,16 @@
     {
         <header class="header">
             <div class="container_header grid">
-                <a href="" target="_parent"><img class="logo_header" src="~/assets/InstadevLogo.png" alt=""></a>
+                <a asp-area="" asp-controller="Feed" asp-action="Index" target="_parent"><img class="logo_header" src="~/assets/InstadevLogo.png" alt=""></a>
                 <form class="pesquisa_form" action="post">
                     <input class="pesquisar" type="text" name="search" id="search" placeholder="Pesquisar" required>
                 </form>
 
                 <ul class="nav_header">
-                    <li><a class="icons_header" href=""><img src="assets/casinha.svg" alt=""></a></li>
-                    <li><a href=""><img src="assets/aviaozinho.svg" alt=""></a></li>
-                    <li><a href=""><img src="assets/bussula.svg" alt=""></a></li>
-                    <li><a href=""><img src="assets/coracaoheader.svg" alt=""></a></li>
+                    <li><a class="icons_header" asp-area="" asp-controller="Feed" asp-action="Index"><img src="~/assets/casinha.svg" alt=""></a></li>
+                    <li><a href=""><img src="~/assets/aviaozinho.svg" alt=""></a></li>
+                    <li><a href=""><img src="~/assets/bussula.svg" alt=""></a></li>
+                    <li><a href=""><img src="~/assets/coracaoheader.svg" alt=""></a></li>
                     <li><a asp-area="" asp-controller="Perfil" asp-action="Index"><img class="foto_header" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt=""></a></li>
                 </ul>
             </div>

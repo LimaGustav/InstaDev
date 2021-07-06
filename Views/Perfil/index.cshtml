@@ -5,7 +5,7 @@
 
 <div class="container">
     <section class="cabecalho_perfil">
-        <img class="foto_perfil" src="/img/@ViewBag.Foto" alt="">
+        <img class="foto_perfil" src="/img/Usuarios/@ViewBag.Secao.Foto" alt="">
         <div class="info_escrita_perfil">
             
             <h1>@ViewBag.Secao.Nome</h1>
@@ -16,7 +16,7 @@
             </div>
             <div class="links_perfil">
                 <h2>@ViewBag.Secao.NomeUsuario</h2>
-                <a asp-area="" asp-controller="EditarPerfil" asp-action="Index">Editar Perfil</a>
+                <a asp-area="" asp-controller="EdicaoPerfil" asp-action="Index">Editar Perfil</a>
                 <a asp-area="" asp-controller="Login" asp-action="Logout" target="_parent">Sair</a>
             </div>
         </div>
@@ -39,7 +39,7 @@
                     <img src="~/img/Posts/@post.Imagem" alt="">
                     <div class="texto_publicacao">
                         <div class="fotinha_usuario">
-                            <img src="/img/@ViewBag.Foto">
+                            <img class="redondo" src="/img/Usuarios/@ViewBag.Secao.Foto">
                             <div class="info_foto_usuario">
                                 <h3>@ViewBag.Secao.NomeUsuario</h3>
                                 <h4>Rio de Janeiro, Brazil</h4>

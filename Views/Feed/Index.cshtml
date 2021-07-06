@@ -28,7 +28,7 @@
                 </div>
                 <div class="perfil_status p4">
                     <a class="link_status" href=""><img src="~/assets/fotoStatus/tony_stark.png" alt=""></a>
-                    <a href=""><span class="nomes">adriano-stark</span></a>
+                    <a href=""><span class="nomes">adrianok</span></a>
                 </div>
                 <div class="perfil_status p5">
                     <a class="link_status" href=""><img src="~/assets/fotoStatus/pele.png" alt=""></a>
@@ -47,7 +47,7 @@
         </section>
         <!-- PERFIL ASIDE -->
         <aside class="perfil">
-            <a class="foto_perfil" href=""><img class="foto_stories" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt=""></a>
+            <a class="foto_perfil" asp-area="" asp-controller="Perfil" asp-action="Index"><img class="foto_stories" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt=""></a>
             <div class="texto_perfil">
                 <span class="user">@ViewBag.Secao.RetornaNomeUsuario()</span>
                 <span class="nome">@ViewBag.Secao.Nome</span>
@@ -114,7 +114,7 @@
                     <div class="posicionador_acoes_post">
                         <div class="centralizador_coments">
                             <div class="acoes_post">
-                                <a href=""><img src="~/assets/coracao.svg" alt=""></a>
+                                <a href=""><img src="~/assets/coracaoheader.svg" alt=""></a>
                                 <a href=""><img src="~/assets/coment.svg" alt=""></a>
                                 <input class="comentario_input" type="text" placeholder="Comentar">
                             </div>

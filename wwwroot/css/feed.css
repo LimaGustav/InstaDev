@@ -176,7 +176,6 @@ main {
 }
 
 .perfil {
-    width: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -190,6 +189,7 @@ main {
 }
 
 .texto_perfil {
+    margin-left: 13px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
