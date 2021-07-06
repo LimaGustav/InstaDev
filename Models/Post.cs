@@ -23,7 +23,7 @@ namespace InstaDev.Models
         }
 
         public string PrepararPost(Post p) {
-            return $"{p.Titulo};{p.Imagem};{p.PostadoPor.ReturnIds().ToString()};{p.HoraPostagem.ToString()};{p.IdPost.ToString()}";
+            return $"{p.Titulo};{p.Imagem};{p.PostadoPor.IdUsuario};{p.HoraPostagem.ToString()};{p.IdPost.ToString()}";
         }
 
         public void Criar(Post p)
@@ -53,7 +53,7 @@ namespace InstaDev.Models
                 Post post = new Post();
                 post.Titulo = linha[0];
                 post.Imagem = linha[1];
-                post.PostadoPor = user.Listar().Find(x => x.ReturnIds().ToString() == linha[2]);
+                post.PostadoPor = user.Listar().Find(x => x.RetornaId().ToString() == linha[2]);
                 post.HoraPostagem = Convert.ToDateTime(linha[3]);
                 post.IdPost = Int32.Parse(linha[4]);
 

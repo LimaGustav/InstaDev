@@ -10,7 +10,7 @@ namespace InstaDev.Models
         private string Email { get; set; }
         public string NomeUsuario { get; private set; }
         public string Foto { get; private set; }
-        private int IdUsuario { get; set; }
+        public int IdUsuario { get; private set; }
         private string Senha { get; set; }
         private const string CAMINHO = "Database/Usuario.csv";
 

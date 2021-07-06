@@ -14,11 +14,14 @@ namespace InstaDev.Controllers
         [Route("Usuario")]
         public IActionResult Index()
         {
-            Usuario secao =  usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
-            
+            // Usuario secao = usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
+
+            int IdUsuario = Int32.Parse(HttpContext.Session.GetString("_UsuarioId"));
+            Usuario dono = usuarioModel.Listar().Find(x => x.IdUsuario == IdUsuario);
+
             ViewBag.Posts = postModel.Listar();
             ViewBag.Usuario = usuarioModel.Listar();
-            ViewBag.Secao = secao;
+            ViewBag.Secao = dono;
 
             return View();
         }

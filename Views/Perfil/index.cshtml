@@ -25,14 +25,15 @@
     <hr>
 
     <div class="publicacoes_quadradinhos">
-        <img src="assets/quadradinhos.svg">
+        <img src="~/assets/quadradinhos.svg">
         <h2>publicações</h2>
     </div>
 
     <section class="publicacoes">
         @foreach (Post post in ViewBag.Posts)
         {
-            if (post.PostadoPor.RetornaId() == ViewBag.Secao.RetornaId())
+            if (post.PostadoPor.IdUsuario ==
+             ViewBag.Secao.IdUsuario)
             {
                 <div class="post">
                     <img src="~/img/Posts/@post.Imagem" alt="">
