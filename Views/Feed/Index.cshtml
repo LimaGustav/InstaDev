@@ -6,12 +6,10 @@
     <div class="posicionador_status">
         <section class="section_status">
             <div class="container_status">
-
-
                 @foreach (var item in ViewBag.Usuarios)
                 {
                     <div class="perfil_status p1">
-                        <a class="link_status" href=""><img src="@item.Foto" alt=""></a>
+                        <a class="link_status" href=""><img class="foto_stories" src="~/img/Usuarios/@item.Foto" alt=""></a>
                         <a href=""><span class="nomes">@item.RetornaNomeUsuario()</span></a>
                     </div>
                 }
@@ -49,7 +47,7 @@
         </section>
         <!-- PERFIL ASIDE -->
         <aside class="perfil">
-            <a class="foto_perfil" href=""><img src="~/img/@ViewBag.Secao.Foto" alt=""></a>
+            <a class="foto_perfil" href=""><img class="foto_stories" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt=""></a>
             <div class="texto_perfil">
                 <span class="user">@ViewBag.Secao.RetornaNomeUsuario()</span>
                 <span class="nome">@ViewBag.Secao.Nome</span>
@@ -62,7 +60,7 @@
         <section class="postar">
             <div class="centralizador_postar">
                 <div class="container_postar">
-                    <img src="~/img/@ViewBag.Secao.Foto" alt="" class="postar_img">
+                    <img class="foto_stories" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt="" class="postar_img">
                     <span>Postar</span>
                 </div>
                 <form class="form_post" method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
@@ -103,9 +101,9 @@
                     <div class="posicionador_post_perfil">
                         <div class="centralizador_perfil_post">
                             <div class="perfil_post">
-                                <img class="foto_perfil_post" src="" alt="">
+                                <img class="foto_perfil_post" src="~/img/Usuarios/@item.RetornaUsuario().Foto" alt="">
                                 <div class="nome_perfil_post">
-                                    <span class="nome_post">@item.RetornaTitulo()</span>
+                                    <span class="nome_post">@item.RetornaUsuario().RetornaNomeUsuario()</span>
                                 </div>
                             </div>
                         </div>
@@ -122,8 +120,8 @@
                             </div>
                             <span class="curtidas">2077 curtidas</span>
                             <div class="comentarios">
-                                <span class="nome_post block">gabigordo</span>
-                                <span class="onde_post block comment">#flamengo Amo vocês mil milhões</span>
+                                <span class="nome_post block">@item.RetornaUsuario().RetornaNomeUsuario()</span>
+                                <span class="onde_post block comment">@item.RetornaTitulo()</span>
                             </div>
                         </div>
                     </div>
