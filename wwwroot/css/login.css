@@ -6,26 +6,6 @@
 
 main{
 
-<<<<<<< HEAD
-background-color: #E5E5E5;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 969px;
-}
-
-.container_login{
-    background-color: #fff;
-    height: 380px;
-    width: 342px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 1px solid #f1f1f1;
-    border-radius: 4px;
-=======
     background-color: #E5E5E5;
     display: flex;
     flex-direction: column;
@@ -47,7 +27,6 @@ height: 969px;
     padding: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
->>>>>>> cadastroMvc
 }
 
 .logo {
@@ -62,22 +41,13 @@ form{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: normal;
     font-size: 13px;
-<<<<<<< HEAD
-=======
     height: 15vh;
->>>>>>> cadastroMvc
 }
 
 input{
     background-color: #FAFAFA;
     color: #AFAFAF;
     border: 1px solid #DCDCDC;
-<<<<<<< HEAD
-    border-radius: 2px;
-    width: 267px;
-    height: 35px;
-    margin-top: 9px;
-=======
     border-radius: 4px;
     width: 16vw;
     height: 19px;
@@ -85,7 +55,6 @@ input{
     padding: 7px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-weight: normal;
->>>>>>> cadastroMvc
     
 }
 
@@ -93,20 +62,10 @@ button{
     background-color: #2686CC;
     color: #FFFFFF;
     border: none;
-<<<<<<< HEAD
-    border-radius: 2px;
-    width: 267px;
-    height: 35px;
-    margin-top: 17px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-=======
     border-radius: 4px;
     height: 32.8167px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-weight: normal;
->>>>>>> cadastroMvc
 }
 
 .div_ou{
@@ -114,30 +73,19 @@ button{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-<<<<<<< HEAD
-    width: 267px;
-=======
     width: 100%;
->>>>>>> cadastroMvc
 }
 
 .div_ou p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: normal;
     font-size: 14px;
-<<<<<<< HEAD
-}
-
-hr {
-    width: 109px;
-=======
     margin-left: 10px;
     margin-right: 10px;
 }
 
 hr {
     width: 147px;
->>>>>>> cadastroMvc
     height: 0;
 }
 
@@ -146,19 +94,12 @@ hr {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
     font-weight: normal;
-<<<<<<< HEAD
-=======
     text-decoration: none;
->>>>>>> cadastroMvc
 }
 
 .container_fazer_cadastro {
     margin-top: 9px;
-<<<<<<< HEAD
-    width: 342px;
-=======
     width: 19.11%;
->>>>>>> cadastroMvc
     height: 75px;
     display: flex;
     align-items: center;
@@ -169,8 +110,6 @@ hr {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-size: 14px;
     font-weight: normal;
-<<<<<<< HEAD
-=======
     text-decoration: none;
 }
 
@@ -178,7 +117,6 @@ hr {
     font-weight: 600;
     color:#2686CC;
     text-decoration: none;
->>>>>>> cadastroMvc
 }
 
 .p_App{

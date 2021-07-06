@@ -92,7 +92,6 @@ a {
     height: min-content;
 }
 
-<<<<<<< HEAD
 .foto_header {
     width: 32px;
     height: 32px;
@@ -100,8 +99,6 @@ a {
     border-radius: 50%;
 }
 
-=======
->>>>>>> cadastroMvc
 /* SECTION STATUS */
 
 main {
@@ -162,7 +159,6 @@ main {
     align-items: center;
 }
 
-<<<<<<< HEAD
 .foto_stories {
     width: 62px;
     height: 62px;
@@ -170,8 +166,6 @@ main {
     border-radius: 50%;
 }
 
-=======
->>>>>>> cadastroMvc
 .nomes {
     font-style: normal;
     font-weight: normal;
@@ -342,18 +336,8 @@ main {
     width: 95%;
 }
 
-<<<<<<< HEAD
 .perfil_post {
     width: min-content;
-=======
-.foto_perfil_post {
-    width: 34px;
-    height: 36px;
-}
-
-.perfil_post {
-    width: 119px;
->>>>>>> cadastroMvc
     height: 60px;
 
     display: flex;
@@ -361,7 +345,6 @@ main {
     align-items: center;
 }
 
-<<<<<<< HEAD
 .foto_perfil_post {
     margin-left: 5px;
     width: 34px;
@@ -376,22 +359,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-=======
-.nome_perfil_post {
-    height: 58%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
->>>>>>> cadastroMvc
 }
 
 .nome_post {
     font-weight: 600;
-<<<<<<< HEAD
     font-size: 15px;
-=======
-    font-size: 13px;
->>>>>>> cadastroMvc
     line-height: 17px;
     color: black;    
 }
@@ -405,10 +377,7 @@ main {
 
 .post_img {
     width: 100%;
-<<<<<<< HEAD
     max-height: 360px;
-=======
->>>>>>> cadastroMvc
 }
 
 .acoes_post {

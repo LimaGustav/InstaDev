@@ -21,6 +21,9 @@
         case "Feed":
             <link rel="stylesheet" href="~/css/feed.css" />
             break;
+        case "Perfil":
+            <link rel="stylesheet" href="~/css/perfil.css" />
+            break;
         default:
             break;
     }
@@ -40,8 +43,8 @@
                     <li><a class="icons_header" href=""><img src="assets/casinha.svg" alt=""></a></li>
                     <li><a href=""><img src="assets/aviaozinho.svg" alt=""></a></li>
                     <li><a href=""><img src="assets/bussula.svg" alt=""></a></li>
-                    <li><a href=""><img src="assets/coracao.svg" alt=""></a></li>
-                    <li><a asp-area="" asp-controller="EdicaoPerfil" asp-action="Index"><img class="foto_header" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt=""></a></li>
+                    <li><a href=""><img src="assets/coracaoheader.svg" alt=""></a></li>
+                    <li><a asp-area="" asp-controller="Perfil" asp-action="Index"><img class="foto_header" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt=""></a></li>
                 </ul>
             </div>
         </header>
