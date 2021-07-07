@@ -47,7 +47,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 25vh;
+    height: 215px;
 }
 
 .mensagem{
@@ -73,7 +73,8 @@ button{
     color: #FFFFFF;
     border: none;
     border-radius: 4px;
-    height: 32.8167px;
+    height: 33px;
+    cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-weight: normal;
 }
@@ -90,7 +91,7 @@ button{
 
 .div_conectar_conta{
     margin-top: 15px;
-    width: 19.1%;
+    width: 342px;
     height: 8%;
     display: flex;
     align-items: center;
@@ -148,18 +149,10 @@ button{
         width: 94%;
     }
 
-    button{
-        height: 4.5vh;
-    }
-
     .textos_termo{
         width: 23.1vw;
         font-size: 13px;
         font-weight: 300;
-    }
-
-    .div_conectar_conta{
-        width: 23%;
     }
 
     .obtenha_aplicativo{

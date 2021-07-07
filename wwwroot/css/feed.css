@@ -50,6 +50,11 @@ a {
     display: block;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 .header {
     height: 53px;
     background-color: white;
@@ -317,6 +322,7 @@ main {
 
 .post {
     margin-top: 38px;
+    margin-bottom: 20px;
 
     height: 610px;
     width: 100%;
@@ -363,9 +369,13 @@ main {
 
 .nome_post {
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 17px;
     color: black;    
+}
+
+.welcome_escrita {
+    font-size: 24px;
 }
 
 .onde_post {
