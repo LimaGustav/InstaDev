@@ -36,5 +36,11 @@ namespace InstaDev.Controllers
             Mensagem = "Dados incorretos, tente novamente";
             return LocalRedirect("~/Login");
         }
+
+        [Route("Logout")]
+        public IActionResult Logout() {
+            HttpContext.Session.Remove("_UsuarioId");
+            return LocalRedirect("~/");
+        }
     }
 }

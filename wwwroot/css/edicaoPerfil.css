@@ -305,6 +305,7 @@ hr {
 }
 
 .container_enviar button{
+    cursor: pointer;
     width: 66px;
     height: 30px;
     color: #fff;
