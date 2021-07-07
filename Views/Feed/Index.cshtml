@@ -6,22 +6,14 @@
     <div class="posicionador_status">
         <section class="section_status">
             <div class="container_status">
-                @foreach (var item in ViewBag.Usuarios)
-                {
-                    <div class="perfil_status p1">
-                        <a class="link_status" href=""><img class="foto_stories" src="~/img/Usuarios/@item.Foto" alt=""></a>
-                        <a href=""><span class="nomes">@item.RetornaNomeUsuario()</span></a>
-                    </div>
-                }
-
-                @* <div class="perfil_status p1">
-                    <a class="link_status" href=""><img src="~/assets/fotoStatus/vin-diesel.png" alt=""></a>
-                    <a href=""><span class="nomes">vin-disel</span></a>
-                    </div> *@
-                @* <div class="perfil_status p2">
+                <div class="perfil_status p1">
+                    <a class="link_status" href=""><img class="foto_stories" src="~/img/Usuarios/@ViewBag.Secao.Foto" alt=""></a>
+                    <a href=""><span class="nomes">@ViewBag.Secao.RetornaNomeUsuario()</span></a>
+                </div>
+                <div class="perfil_status p2">
                     <a class="link_status" href=""><img src="~/assets/fotoStatus/gabigordo.png" alt=""></a>
                     <a href=""><span class="nomes">gabigordo</span></a>
-                </div> *@
+                </div>
                 <div class="perfil_status p3">
                     <a class="link_status" href=""><img src="~/assets/fotoStatus/will-baiano.png" alt=""></a>
                     <a href=""><span class="nomes">will-baiano</span></a>

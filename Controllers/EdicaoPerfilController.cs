@@ -59,8 +59,15 @@ namespace InstaDev.Controllers
         [Route("Excluir")]
         public IActionResult Excluir(int id)
         {
-            // postModel.Excluir();
+            Usuario secao = usuarioModel.Listar().Find(x => x.RetornaId() == Int32.Parse(HttpContext.Session.GetString("_UsuarioId")));
+            foreach (Post post in postModel.Listar())
+            {
+                if (post.PostadoPor.IdUsuario == secao.IdUsuario)
 
+                {
+                    postModel.Excluir(post);
+                }
+            }
             usuarioModel.Excluir(id);
             ViewBag.Usuarios = usuarioModel.Listar();
             return LocalRedirect("~/");

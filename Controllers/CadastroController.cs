@@ -45,7 +45,7 @@ namespace InstaDev.Controllers
             else
             {
                 Mensagem = "Email já cadastrado";
-                return LocalRedirect("~/Usuario");
+                return LocalRedirect("~/Cadastro");
             }
         }
     }
