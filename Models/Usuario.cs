@@ -58,7 +58,7 @@ namespace InstaDev.Models
         public void Excluir(int id)
         {
             List<string> linhas = LerTodasLinhasCSV(CAMINHO);
-            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            linhas.RemoveAll(x => x.Split(";")[5] == id.ToString());
 
             ReescreverCSV(CAMINHO, linhas);
         }

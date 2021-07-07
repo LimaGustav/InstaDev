@@ -10,6 +10,7 @@ namespace InstaDev.Controllers
     public class EdicaoPerfilController : Controller
     {
         Usuario usuarioModel = new Usuario();
+        Post postModel = new Post();
 
 
         public IActionResult Index()
@@ -58,9 +59,11 @@ namespace InstaDev.Controllers
         [Route("Excluir")]
         public IActionResult Excluir(int id)
         {
+            // postModel.Excluir();
+
             usuarioModel.Excluir(id);
             ViewBag.Usuarios = usuarioModel.Listar();
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/");
         }
     }
 }
